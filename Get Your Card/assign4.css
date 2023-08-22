@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Aladin:regular);
+@import url(https://fonts.googleapis.com/css?family=Kanit:regular);
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+.parent{
+    width: 100%;
+    height: 100vh;
+    background: url("bg9.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.card{
+    width: 30%;
+    height: 240px;
+    border-radius: 5px;
+    position: relative;
+    top: 35px;
+    left: 67.5%;
+    perspective: 1800px;
+    box-shadow: 5px 5px 25px gray;
+}
+.but{
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    z-index: 5;
+    top: 110%;
+    left: 30%;
+    background-color: transparent;
+    box-shadow: 10px 10px 30px gray;
+    border: transparent;
+    color: white;
+    font-family: Kanit;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.back{
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;
+    background: url("mh1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    transition: all linear 0.5s;
+}
+.front{
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;
+    background: url("mh2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all linear 0.5s;
+}
+.but:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+.but:focus~div{
+    transform: rotateY(180deg);
+}
+#bnk{
+    font-family: Aladin;
+    font-size: 42px;
+    color: #FFFDE3;
+    position: absolute;
+    left: 10px;
+}
+#nfc{
+    font-size: 36px;
+    font-weight: bolder;
+    position: absolute;
+    left: 88%;
+    top: 10px;
+    color: #FFFDE3;
+}
+.chip{
+    width: 15%;
+    height: 45px;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background: url("chip.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 175% 175%;
+}
+#num{
+    font-family: Kanit;
+    font-size: 20px;
+    color: #FFFDE3;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+#val{
+    font-family: Kanit;
+    font-size: 14px;
+    color: #FFFDE3;
+    position: absolute;
+    top: 62%;
+    left: 10px;
+}
+#dat{
+    font-family: Kanit;
+    font-size: 20px;
+    color: #FFFDE3;
+    position: absolute;
+    top: 67%;
+    left: 12px;
+}
+#nam{
+    font-family: Aladin;
+    font-size: 32px;
+    color: #FFFDE3;
+    position: absolute;
+    top: 82%;
+    left: 10px;
+}
+#visa{
+    font-size: 42px;
+    position: absolute;
+    top: 78%;
+    left: 86%;
+    color: #FFFDE3;
+}
+.black{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    margin-top: 10px;
+}
+.cvv{
+    width: 50%;
+    height: 30px;
+    margin-left: 48%;
+    margin-top: 5px;
+    background: radial-gradient(100% 225% at 100% 0%, #FF0000 0%, #000000 100%), linear-gradient(236deg, #00C2FF 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+    background-blend-mode: overlay, hard-light, normal;
+    border-radius: 5px;
+}
+.cvv h2{
+    font-family: Kanit;
+    line-height: 30px;
+    color: #FFFDE3;
+    margin-left: 5px;
+}
+.back i{
+    font-size: 42px;
+    position: absolute;
+    top: 80%;
+    left: 5px;
+}
+.fill{
+    width: 30%;
+    height: 540px;
+    /* background-color: cyan; */
+    background: url("bg12.jpg");
+    background-position: center;
+    background-size: 120% 160%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 40px white;
+    position: absolute;
+    top: 40px;
+    left: 150px;
+}
+header{
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+}
+header p{
+    text-align: center;
+    line-height: 32px;
+    color: white;
+    font-size: 30px;
+    font-family: Kanit;
+}
+.detail{
+    width: 100%;
+    height: 320px;
+    margin-top: 30px;
+    position: relative;
+    /* background-color: cyan; */
+}
+label{
+    color: white;
+    font-size: 24px;
+    margin-left: 75px;
+}
+#f1,#f2,#f3,#f4{
+    width: 70%;
+    height: 30px;
+    margin-left: 15%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(250, 250, 250, 0.2);
+    padding-left: 15px;
+    padding-right: 45px;
+}
+form i{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 258px;
+    left: 310px;
+}
+#i2{
+    display: none;
+    position: absolute;
+    left: 308px;
+}
+form i:hover{
+    cursor: pointer;
+}

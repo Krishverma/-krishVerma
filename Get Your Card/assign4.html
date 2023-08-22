@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css" media="all">
+    <link rel="stylesheet" href="assign4.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="fill">
+            <header>
+                <p>Get Your Customised Card<br>Sign Up Now</p>
+            </header>
+            <div class="detail">
+                <form action="" onsubmit="validate()">
+                    <label for="f1">Name</label>
+                    <br>
+                    <input type="text" id="f1">
+                    <br><br>
+                    <label for="f2">Phone Number</label>
+                    <br>
+                    <input type="tel" id="f2">
+                    <br><br>
+                    <label for="f3">Mail Id</label>
+                    <br>
+                    <input type="text" id="f3">
+                    <br><br>
+                    <label for="f4">Password</label>
+                    <br>
+                    <input type="password" id="f4">
+                    <i class="fa-solid fa-eye" onclick="eye()" id="i1"></i>
+                    <i class="fa-solid fa-eye-slash" onclick="eye()" id="i2"></i>
+                    <br><br>
+                    <input type="submit" id="btn" class="but">
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <button class="but">Click For Heist</button>
+            <div class="back">
+                <div class="black"></div>
+                <div class="cvv"><h2>007</h2></div>
+                <i class="fa-solid fa-signature"></i>
+            </div>
+            <div class="front">
+                <h2 id="bnk">Bank of Spain</h2>
+                <i class="fa-brands fa-nfc-symbol" id="nfc"></i>
+                <div class="chip"></div>
+                <h2 id="num">1234 5678 8765 4321</h2>
+                <p id="val">Valid Thru</p>
+                <h2 id="dat">10/27</h2>
+                <h2 id="nam">Your Name Here</h2>
+                <i class="fa-brands fa-cc-visa" id="visa"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="assign4.js"></script>
+
+</body>
+</html>
