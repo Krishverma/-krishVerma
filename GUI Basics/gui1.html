@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./jquery-ui-1.13.2/jquery-ui.css">
+    <link rel="stylesheet" href="./jquery-ui-1.13.2/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./jquery-ui-1.13.2/jquery-ui.theme.css">
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./jquery-ui-1.13.2/jquery-ui.js"></script>
+    <title>Document</title>
+    <style>
+        #container{
+            width: 700px;
+            height: 450px;
+            margin: 70px auto;
+            border: 5px dotted red ;
+        }
+        h2{
+            color: dodgerblue;
+            text-align: center;
+        }
+        #btnaddproject{
+            margin-left: 80%;
+        }
+        #projects{
+            width: 650px;
+            height: 200px;
+            margin: 100px auto;
+        }
+        ol li{
+            border: 1px dotted black;
+            cursor: pointer;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        ol li:hover{
+            background-color: dodgerblue;
+        }
+        #project-dialog{
+            display: none;
+        }
+        #new-project{
+            border: 2px solid yellow;
+            outline: none;
+            color: dodgerblue;
+            box-shadow: 6px 6px 0px dodgerblue;
+            border-radius: 8px;
+            padding: 8px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#projects").tabs();
+            $("ul").sortable({axis:"x",containment:"#projects"});
+            $("ol").sortable({axis:"y",containment:"#projects"});
+            $("#btnaddproject").button();
+            $("#btnaddproject").click(function(){
+                $("#project-dialog").dialog({width:400, resizable:false, modal:true,
+                buttons:{
+                    "Add New Project":function(){
+                        var projectname = $("#new-project").val();
+                        $("<li><a href='#"+projectname+" '>" + projectname +"</a></li>").appendTo("#main");
+                        $("<ol id=' "+projectname+" '></ol>").appendTo("#projects");
+                        $("#projects").tabs("refresh");
+
+                        $("#new-project").val();
+                        $(this).dialog("close");
+                    },
+                    "Cancel":function(){
+                        $("#new-project").val();
+                        $(this).dialog("close");
+                    }
+                } 
+                });
+                
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h2>Krish Documents</h2>
+        <button id="btnaddproject">Add Project</button>
+        <div id="projects">
+            <ul id="main">
+                <li><a href="#personal">Personal</a></li>
+                <li><a href="#work">Work</a></li>
+            </ul>
+            <ol id="personal">
+                <li><input type="checkbox">Appointment</li>
+                <li><input type="checkbox">Prescription</li>
+            </ol>
+            <ol id="work">
+                <li><input type="checkbox">Complete Test</li>
+                <li><input type="checkbox">Complete Analysis</li>
+                <li><input type="checkbox">Complete Properties</li>
+            </ol>
+        </div>
+        <div id="project-dialog" title="Add a Project">
+            <label for="new-project">Project Name:</label>
+            <input id="new-project" type="text">
+        </div>
+    </div>
+</body>
+</html>
