@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Form 1</title>
+	</head>
+	<body>
+		<form>
+			<table align="center" border="2">
+			
+				<tr>
+					<td bgcolor="lightblue">
+						<h3>Step1: Your Details</h3>
+						<table border="2" align="center" cellpadding="10">
+							
+							<tr>
+								<td><label>Name</label></td>
+								<td><input type="text" placeholder="First & Last Name"></td>
+							</tr>
+							<tr>
+								<td><label>Email</label></td>
+								<td><input type="email" placeholder="example@domain.com"></td>
+							</tr>
+							<tr>
+								<td><label>Phone</label></td>
+								<td><input type="number" placeholder="Eg. +91-0000000000"></td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				
+				<tr>
+					<td bgcolor="lightblue">
+						<h3>Step2: Delivery Address</h3>
+						<table border="2" align="center" cellpadding="10">
+						
+							<tr>
+								<td><label>Address</label></td>
+								<td><textarea rows="5" cols="20"></textarea></td>
+							</tr>
+							<tr>
+								<td><label>Postal Code</label></td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td><label>Country</label></td>
+								<td><input type="text"></td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				
+				<tr>
+					<td bgcolor="lightblue">
+						<h3>Step3: Card Details</h3>
+						<table border="2" align="center" cellpadding="10">
+						
+							<tr>
+								<td colspan="2">
+									<dl>
+										<dt><label>Card Type</label></dt>
+										<br>
+										<dd><input type="radio" name="c"><img src="visa.jpg" width="20" height="14">
+										Visa&nbsp;&nbsp;&nbsp;<input type="radio" name="c"><img src="master.jpg" width="20" height="14">MasterCard&nbsp;&nbsp;&nbsp;<input type="radio" name="c"><img src="amex.png" width="20" height="14">AmEx</dd>
+										
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Card Number</label></td>
+								<td><input type="number"></td>
+							</tr>
+							<tr>
+								<td><label>Security Code</label></td>
+								<td><input type="password" maxlength="4"></td>
+							</tr>
+							<tr>
+								<td><label>Name on Card</label></td>
+								<td><input type="text" placeholder="Exact Name on the Card"></td>
+							</tr>
+						</table>
+						<tr>
+							<td bgcolor="lightblue" align="center"><input type="button" value="Buy It"></td>
+						</tr>
+						
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+	</body>
+</html>
