@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Table Assignment 4</title>
+	</head>
+	<body>
+		<table align="center" cellpadding="20" border="2">
+		
+			<tr>
+				<td><center><b>Header Column 1</b></center></td>
+				<td><center><b>Header Column 2</b></center></td>
+				<td><center><b>Header Column 3</b></center></td>
+				<td><center><b>Header Column 4</b></center></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="2"><center>Row2-Item1</center></td>
+				<td rowspan="2"><center>Row2-Item2</center></td>
+				<td rowspan="3"><center>Row2-Nested Table 1</center><br>
+				
+					<table align="center" cellpadding="10" border="2">
+						<tr>
+							<td><center><b>Row 1 Header</b></center></td>
+							<td><center>Item</center></td>
+						</tr>
+						<tr>
+							<td><center><b>Row 2 Header</b></center></td>
+							<td><center>Item</center></td>
+						</tr>
+						<tr>
+							<td><center><b>Row 3 Header</b></center></td>
+							<td><center>Item<center></td>
+						</tr>
+					</table>
+					
+				</td>
+				<td rowspan="2">Row2-Item4<br>A Second Line</td>
+			</tr>
+			
+			<tr></tr>
+			
+			<tr>
+				<td><center>Row3-Nested Table 2</center><br>
+					
+					<table align="center" cellpadding="10" border="2">
+						
+						<tr>
+							<td><center><b>Row 1 Header</b></center></td>
+							<td><center>Item</center></td>
+						</tr>
+						<tr>
+							<td><center><b>Row 2 Header</b></center></td>
+							<td><center>Item</center></td>
+						</tr>
+						
+					</table>
+				</td>
+				<td><center>Row3-Item2</center></td>
+				<td rowspan="2"><center>Row3-Item3</center></td>
+			</tr>
+			
+			<tr>
+				<td><center>Row4-Item1</center></td>
+				<td><center>Row4-Item2</center></td>
+				<td><center>Row4-Item3</center></td>
+			</tr>
+			
+			<tr>
+				<td colspan="4">Row5- Last Row of Outer table</td>
+			</tr>
+			
+		</table>
+	</body>
+</html>
