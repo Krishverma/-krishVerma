@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assign1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="in">
+            <input type="text" value="" id="num1" placeholder="I Number">
+            <br>
+            <br>
+            <input type="text" value="" id="num2" placeholder="II Number">
+        </div>
+        <div class="out">
+            <div class="butt">
+                <div class="box"><input type="button" value="Sum" class="btn" onclick="addnum()"></div>
+                <div class="box"><input type="button" value="Difference" class="btn" onclick="subnum()"></div>
+                <div class="box"><input type="button" value="Product" class="btn" onclick="mulnum()"></div>
+                <div class="box"><input type="button" value="Quotient" class="btn" onclick="divnum()"></div>
+                <div class="box"><input type="button" value="Remainder" class="btn" onclick="remnum()"></div>
+            </div>
+            <div class="result">
+                <div class="output"><h1 id="answer"></h1></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assign1.js"></script>
+
+</body>
+</html>
