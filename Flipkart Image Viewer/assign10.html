@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0px; */
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .options{
+            width: 5%;
+            height: 600px;
+            float: left;
+        }
+        .pic{
+            width: 90%;
+            height: 60px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 5%;
+        }
+        #main{
+            width: 500px;
+            height: 500px;
+            /* border: 2px solid gray; */
+            border-radius: 4px;
+            margin-left: 250px;
+        }
+        .pic:hover{
+            cursor: pointer;
+            border: 1px solid dodgerblue;
+        }
+        #ip1,#ip2,#ip3,#ip4,#ip5{
+            width: 50px;
+            height: 50px;
+            margin-left: 6px;
+            margin-top: 4px;
+            border-radius: 2px;
+        }
+        #ip11,#ip22,#ip33,#ip44,#ip55{
+            width: 450px;
+            height: 450px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="options">
+        <div class="pic">
+            <img src="ip1.jpg" alt="" id="ip1" onclick="change(0)">
+        </div>
+        <div class="pic">
+            <img src="ip2.jpg" alt="" id="ip2" onclick="change(1)">
+        </div>
+        <div class="pic">
+            <img src="ip3.jpg" alt="" id="ip3" onclick="change(2)">
+        </div>
+        <div class="pic">
+            <img src="ip4.jpg" alt="" id="ip4" onclick="change(3)">
+        </div>
+        <div class="pic">
+            <img src="ip5.jpg" alt="" id="ip5" onclick="change(4)">
+        </div>
+    </div>
+    <div id="main">
+        <div class="img">
+            <img src="ip1.jpg" alt="" id="ip11">
+        </div>
+        <div class="img">
+            <img src="ip2.jpg" alt="" id="ip22">
+        </div>
+        <div class="img">
+            <img src="ip3.jpg" alt="" id="ip33">
+        </div>
+        <div class="img">
+            <img src="ip4.jpg" alt="" id="ip44">
+        </div>
+        <div class="img">
+            <img src="ip5.jpg" alt="" id="ip55">
+        </div>
+    </div>
+    <script>
+        let flag=0;
+        slideshow(flag);
+        function slideshow(num){
+        let slides=document.getElementsByClassName('img');
+        for(let y of slides){
+              y.style.display="none";
+        }
+        slides[num].style.display="block";
+     }
+     function change(x){
+         flag=x;
+         slideshow(flag);
+     }
+    </script>
+</body>
+</html>
